@@ -1,0 +1,173 @@
+.notes {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.notes .edit-modal {
+	position: fixed;
+	left: 0;
+	z-index: 200;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(30, 30, 30, 0.6);
+	/* background-color: rgba(229, 229, 229, 0.5); */
+	opacity: 0;
+	visibility: hidden;
+	transform: scale(1.1);
+	transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.notes .edit-modal.open {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.notes .edit-content {
+    box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.302), 0 4px 8px 3px rgba(60, 64, 67, 0.149);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+    background-color: #222222;
+    padding: 1rem 1.5rem;
+	width: 30rem;
+	border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 0.5rem;
+}
+
+.edit-content .input-content {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.edit-content .input-content input {
+	outline: none;
+	border: none;
+	font-size: 18px;
+	color: white;
+	background-color: transparent;
+}
+
+.edit-content .input-content input:last-child {
+	font-size: 14px;
+}
+
+.edit-content .input-content input::placeholder {
+	color: rgba(255, 255, 255, 0.6);
+	font-weight: 600;
+}
+
+.edit-content .button-content {
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px;
+}
+
+.button-content button {
+	cursor: pointer;
+	border: none;
+	font-size: 14px;
+	font-weight: 600;
+	background-color: transparent;
+	border-radius: 20px;
+	width: 55px;
+	height: 30px;
+	padding: 5px;
+	color: rgba(200, 200, 200, 0.8);
+}
+
+.button-content button:hover {
+	background-color: #303030;
+}
+
+.notes .add-note {
+	display: flex;
+	flex-direction: column;
+	border-radius: 6px;
+	padding: 12px 0;
+	margin: 40px 0;
+	width: 30em;
+	border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.add-note .input-box {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 20px 0;
+}
+
+.add-note .input-box input {
+	outline: none;
+	padding: 0 10px;
+	border: none;
+	font-size: 16px;
+	color: white;
+	background-color: transparent;
+}
+
+.add-note .input-box input:first-child {
+	display: none;
+}
+
+.add-note .input-box input::placeholder {
+	color: rgba(255, 255, 255, 0.6);
+	font-weight: 600;
+}
+
+.add-note .button-box {
+	display: none;
+	justify-content: flex-end;
+	gap: 10px;
+	padding: 0 10px;
+}
+
+.add-note .button-box button {
+	cursor: pointer;
+	border: none;
+	font-size: 14px;
+	font-weight: 600;
+	background-color: transparent;
+	border-radius: 20px;
+	width: 55px;
+	height: 30px;
+	padding: 5px;
+	color: rgba(200, 200, 200, 0.8);
+}
+
+.add-note .button-box button:hover {
+	/* border: solid 1px  rgba(200, 200, 200, 0.8); */
+	background-color: #303030;
+
+}
+
+.notes .container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	color: white;
+	gap: 20px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+	border: 1px solid transparent;
+	-webkit-text-fill-color: white;
+	-webkit-box-shadow: 0 0 0px 1000px transparent inset;
+	transition: background-color 5000s ease-in-out 0s;
+}
